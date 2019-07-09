@@ -1,0 +1,113 @@
+<template>
+  <div class="two">
+    <!-- 顶部展示图片 -->
+    <div class="show-img">
+      <img src="@&show.jpg&"/>
+    </div>
+    <div class="safety">
+      <div class="item text"></div>
+      
+      <img class="item button" src="@&one-3.png&"/>
+      
+    </div>
+    <img class="item flay" src="@&one-4.png&"/>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    data: {
+    },
+    created: function () {
+      // 返回首页
+      // if (!owo.state.start) {
+      //   setTimeout(() => {
+      //     location.replace('')
+      //   }, 0)
+      // }
+      // 注册返回方式
+      owo.state.animation = {
+        "in": 'moveToRight',
+        "out": 'moveFromLeft'
+      }
+      setTimeout(() => {
+        this.$el.getElementsByClassName('flay')[0].classList.add('flaying')
+      }, 1000)
+      
+      setTimeout(() => {
+        this.$el.getElementsByClassName('button')[0].style.display = 'block'
+      }, 4500)
+      changeDecorate(this.$el)
+    },
+    look: function () {
+      $go('rule', 'moveToLeft', 'moveFromRight')
+    },
+    toAnswerQuestions: function () {
+      $go('answer', 'moveToLeft', 'moveFromRight')
+    }
+  }
+</script>
+
+
+<style lang="less">
+@keyframes open {
+  0% {
+    height: 0;
+  }
+  25% {
+    height: 55px;
+  }
+  30% {
+    height: 55px;
+  }
+  50% {
+    height: 200px;
+  }
+  50% {
+    height: 200px;
+  }
+  100% {
+    height: 367px;
+  }
+}
+.item {
+  position: absolute;
+}
+.show-img {
+  width: 100%;
+  height: 33%;
+  position: absolute;
+  top: 6%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.text {
+  width: 512px;
+  height: 367px;
+  left: 129px;
+  top: 630px;
+  background-image: url('@&two-text.png&');
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-name: 'open';
+  animation-duration: 4s;
+}
+.button {
+  display: none;
+  left: 126px;
+  top: 1244px;
+}
+.flay {
+  left: -28%;
+  position: absolute;
+  top: 15%;
+  width: 30%;
+  transition: all 3s linear;
+}
+.flaying {
+  top: 80%;
+  left: 65%;
+}
+</style>

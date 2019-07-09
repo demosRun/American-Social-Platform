@@ -1,0 +1,151 @@
+<template>
+  <div class="victory">
+    <div class="safety">
+      <img class="box" src="@&victory.png&"/>
+      <div class="text">恭喜您！<br>您一共答对了<span class="number">6</span>题</div>
+      <img class="title title3" src="@&title-3.png&"/>
+      <!-- 输入框 -->
+      <div class="input-box">
+        <div class="input-bar">
+          <span>姓名：</span>
+          <input id="name" type="text">
+        </div>
+        <div class="input-bar">
+          <span>手机号：</span>
+          <input id="phone" type="text">
+        </div>
+      </div>
+      <div class="button" @click="submit">提交</div>
+    </div>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    data: {
+    },
+    created: function () {
+      // 返回首页
+      if (!owo.state.start) {
+        setTimeout(() => {
+          location.replace('')
+        }, 0)
+      }
+      // 注册返回方式
+      owo.state.animation = {
+        "in": 'moveToRight',
+        "out": 'moveFromLeft'
+      }
+      // 修复输入框弹出屏幕改变大小问题
+      if (document.body.clientWidth < document.body.clientHeight) {
+        document.body.style.maxWidth = '100%'
+        document.body.style.height = window.innerHeight + 'px'
+      }
+      
+
+
+      // console.log(document.body.style)
+      this.$el.getElementsByClassName('number')[0].innerText = owo.state.right ? owo.state.right : 0
+
+      this.$el.getElementsByTagName('span')[0].innerText = owo.state.right ? owo.state.right : 0
+      log(document.body.clientWidth, document.body.clientHeight)
+
+      changeDecorate(this.$el)
+    },
+    submit: function () {
+      const name = document.getElementById('name').value
+      const phone = document.getElementById('phone').value
+      // console.log(name, phone)
+      owo.tool.toast('提交成功!')
+      $.post("http://www.people.com.cn/", {
+        name,
+        phone,
+        code: owo.state.right
+      }, (result) => {
+        
+      })
+      
+    }
+  }
+</script>
+
+
+<style lang="less">
+.victory {
+  background-image: url('@&bg-2.jpg&');
+}
+.title {
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+}
+.title3 {
+  top: 1229px;
+  left: 0;
+  right: 0;
+}
+.box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 285px;
+}
+.text {
+  width: 78%;
+  text-align: center;
+  font-size: 50px;
+  color: #484848;
+  line-height: 80px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 460px;
+  position: absolute;
+  span {
+    color: #ec513a;
+    font-size: 75px;
+    margin: 0 5px;
+  }
+}
+.input-box {
+  width: 70%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 900px;
+  margin: 0 auto;
+  .input-bar {
+    display: flex;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 25px;
+    span {
+      color: #484848;
+      width: 200px;
+      text-align: right;
+      font-size: 40px;
+    }
+    input {
+      font-size: 30px;
+      padding: 0 5px;
+      width: 290px;
+      height: 60px;
+    }
+  }
+}
+.button {
+  background-color: #2c469b;
+  text-align: center;
+  color: white;
+  width: 140px;
+  line-height: 60px;
+  font-size: 27px;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 1080px;
+}
+</style>

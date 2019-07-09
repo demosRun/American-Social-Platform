@@ -1,0 +1,115 @@
+<template>
+  <div class="home">
+    <div class="safety">
+      <img class="title title1" src="@&one-text.png&"/>
+      <img class="title title2" src="@&one-text-2.png&"/>
+      <img @touchend="flay" class="title title3" src="@&one-3.png&"/>
+      <img class="title title4" src="@&one-4.png&"/>
+    </div>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    data: {
+    },
+    created: function () {
+      // 3秒后出现飞机
+      setTimeout(() => {
+        // $go('two', 'moveToRight', 'moveFromLeft')
+        owo.state.start = true
+        this.$el.getElementsByClassName('title3')[0].style.display = 'block'
+        this.$el.getElementsByClassName('title4')[0].style.opacity = 1
+      }, 2500)
+      // 计算长宽比例
+      changeDecorate(this.$el)
+    },
+    flay: function () {
+      console.log('sd')
+      this.$el.getElementsByClassName('title4')[0].classList.add('flay')
+      // owo.state.start = true
+      // 等待1秒进入第二页
+      setTimeout(() => {
+        $go('two', 'moveToLeft', 'moveFromRight')
+      }, 1000)
+      
+    }
+  }
+</script>
+
+<style lang="less">
+
+@keyframes moveFromTop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 320px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromBootom {
+  from {
+    top: 1400px;;
+    opacity: 0;
+  }
+  to {
+    top: 1169px;;
+    opacity: 1;
+  }
+}
+
+.title {
+  display: block;
+  position: absolute;
+}
+.title1 {
+  left: 222px;
+  top: 320px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: 'moveFromTop';
+  animation-duration: 1s;
+}
+.title2 {
+  left: 140px;
+  top: 479px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: 'fadein';
+  animation-duration: 3.5s;
+  animation-delay: 1s;
+}
+.title3 {
+  top: 837px;
+  left: 143px;
+  display: none;
+  animation-fill-mode: backwards;
+  animation-name: 'twinkle';
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+.title4 {
+  top: 450px;
+  left: 338px;
+  right: 0;
+  opacity: 0;
+  transition: all 0.6s linear;
+}
+.flay {
+  left: 755px;
+  top: 400px;
+}
+</style>
