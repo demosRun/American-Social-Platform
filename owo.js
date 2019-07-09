@@ -93,11 +93,13 @@ module.exports = {
   // 使用到的外部脚本清单
   scriptList: [
     {
-      name: "jquery1.11.0",
+      name: "jquery3.0.0",
       src: "http://tools.people.com.cn/libs/jquery/3.0.0/jquery-3.0.0.min.js"
     },
     {
       name: "main",
+      // 是否使用babel处理
+      babel: true,
       src: "./src/main.js"
     },
   ],

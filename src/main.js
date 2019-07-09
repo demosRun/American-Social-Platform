@@ -2,9 +2,10 @@
 window.onresize = function() {
   changeDecorate(document.getElementsByClassName(owo.entry)[0])
 }
-document.addEventListener('touchmove', function(e){
-  e.preventDefault()
-}, false)
+
+$(window).on("touchmove", function(e) {
+  e.preventDefault()
+})
 
 function changeDecorate ($el) {
   log('重新计算合适安全区')
@@ -13,7 +14,7 @@ function changeDecorate ($el) {
   const sh = document.body.offsetHeight / 1508
   const ms = sw > sh ? sh : sw
   // 获取页面安全区
-  const safety = $el.getElementsByClassName('safety')[0]
+  const safety = $el.querySelectorAll('.safety')[0]
   safety.style.transform = `scale(${ms})`
   if (sw > sh) {
     safety.style.top = `${-1508 / 2 * (1 - sh)}px`
