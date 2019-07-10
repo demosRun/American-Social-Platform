@@ -43,6 +43,10 @@ a {
   }
 }
 
-.two {
+.two, .three {
   background-image: url('@&two-bg.jpg&');
+}
+
+.safety .item {
+  position: absolute;
 }

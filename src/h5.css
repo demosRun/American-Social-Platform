@@ -61,7 +61,39 @@ body {
   border-radius: 5px;
 }
 
+/* 淡入 */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
 /* 去掉全局 */
 * {
   touch-action: pan-y;
+}
+
+@keyframes arrowmoveup {
+	0% {
+		bottom: 5%;
+		opacity: 1
+	}
+
+	100% {
+		bottom: 7%;
+		opacity: 0
+	}
+}
+.arrow {
+  position: absolute;
+  width: 5%;
+  left: 0;
+  right: 0;
+  bottom: 5%;
+  margin: auto;
+  animation: arrowmoveup 1.4s linear infinite;
 }

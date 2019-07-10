@@ -1,0 +1,183 @@
+<template>
+  <div class="three">
+    <div class="safety">
+      <!-- 上方文字 -->
+      <div class="item text"></div>
+      <!-- 旋转的环 -->
+      <div class="item ring">
+        <div class="ring-item-box">
+          <div class="ring-item">-月报年报-</div>
+          <div class="ring-item">-用户增长-</div>
+          <div class="ring-item">-用户互动-</div>
+          <div class="ring-item">主题策划推广</div>
+          <div class="ring-item">-审核发布-</div>
+          <div class="ring-item">-内容编译-</div>
+          <div class="ring-item">-账号创建-</div>
+          <div class="ring-item">-封面图设计-</div>
+        </div>
+      </div>
+      <img @click="five" class="item button1" src="@&three-button-1.png&"/>
+      <img @click="four" class="item button2" src="@&three-button-2.png&"/>
+    </div>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      // 返回首页
+      // if (!owo.state.start) {
+      //   setTimeout(() => {
+      //     location.replace('')
+      //   }, 0)
+      // }
+      // 注册返回方式
+      owo.state.animation = {
+        "in": 'moveToRight',
+        "out": 'moveFromLeft'
+      }
+      // 计算长宽比例
+      changeDecorate(this.$el)
+      this.ringIt(this.query('.ring-item-box')[0], 220)
+    },
+    four: function () {
+      $go('four', 'moveToLeft', 'moveFromRight')
+    },
+    five: function () {
+      $go('five', 'moveToLeft', 'moveFromRight')
+    },
+    ringIt: function (dom, radius, centerCoordinate) {
+      // 半径
+      const r = radius || 10
+      // 中心点坐标
+      const centre = centerCoordinate || [dom.clientWidth / 2, dom.clientHeight / 2]
+      // 子节点列表
+      const childList = dom.children
+      // 角度
+      const angle = 360 / (childList.length)
+      for (const key in childList) {
+        if (childList.hasOwnProperty(key)) {
+          const element = childList[key]
+          setTimeout(() => {
+            element.style.position = 'absolute'
+            element.style.left = centre[0] + (r * Math.cos(parseInt(key) * angle * Math.PI / 180)) - element.clientWidth / 2 + 'px'
+            element.style.top = centre[1] + (r * Math.sin(parseInt(key) * angle* Math.PI / 180)) - element.clientHeight / 2 + 'px'
+          }, 0)
+        }
+      }
+      console.log(childList)
+    }
+  }
+</script>
+
+
+<style lang="less">
+@keyframes open {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 340px;
+  }
+}
+.text {
+  width: 548px;
+  height: 340px;
+  left: 112px;
+  top: 159px;
+  background-image: url('@&three-text.png&');
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-name: 'open';
+  animation-duration: 4s;
+}
+.ring {
+  left: 36px;
+  top: 543px;
+  width: 714px;
+  height: 686px;
+  background-image: url('@&three-1.png&');
+  background-position: 13px -8px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: 'fadein';
+  animation-duration: 3.5s;
+  animation-delay: 5s;
+  @-webkit-keyframes circle {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+
+    25% {
+      -webkit-transform: rotate(90deg);
+    }
+
+    50% {
+      -webkit-transform: rotate(180deg);
+    }
+
+    75% {
+      -webkit-transform: rotate(270deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes circle_zi {
+    0% {
+      -webkit-transform: rotate(360deg);
+    }
+
+    25% {
+      -webkit-transform: rotate(270deg);
+    }
+
+    50% {
+      -webkit-transform: rotate(180deg);
+    }
+
+    75% {
+      -webkit-transform: rotate(90deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(0deg);
+    }
+  }
+  .ring-item {
+    width: 130px;
+    height: 130px;
+    background-color: #7ea8f0;
+    border-radius: 65px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 130px;
+    color: white;
+    animation: circle_zi 15s linear infinite;
+  }
+  .ring-item-box {
+    width: 100%;
+    height: 100%;
+    animation: circle 15s linear infinite;
+  }
+}
+.button1 {
+  left: 126px;
+  top: 1265px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: 'fadein';
+  animation-duration: 3.5s;
+  animation-delay: 5s;
+}
+.button2 {
+  left: 487px;
+  top: 1265px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: 'fadein';
+  animation-duration: 3.5s;
+  animation-delay: 5s;
+}
+</style>

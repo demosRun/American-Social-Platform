@@ -1,0 +1,35 @@
+<template>
+  <div class="six">
+    <div class="info"><strong>更多信息：</strong><br>人民网海外社交平台推广网址<br><strong>联系我们：</strong><br>电话：010-6536 3638<br>邮箱：usa@people.cn<br>地址：北京市朝阳区金台西路2号人民日报新媒体大楼 </div>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    data: {
+    },
+    created: function () {
+      owo.state.animation = {
+        "in": 'moveToBottom',
+        "out": 'moveFromTop'
+      }
+    }
+  }
+</script>
+
+<style lang="less">
+.info {
+  width: 80%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 27%;
+  margin: auto;
+  color: #434951;
+  line-height: 30px;
+  font-size: 16px;
+}
+.six {
+  background-image: url('@&bg2.jpg&');
+}
+</style>

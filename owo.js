@@ -131,24 +131,24 @@ module.exports = {
       src: './src/page/two.page'
     },
     {
-      name: 'rule',
+      name: 'three',
       isPage: true,
-      src: './src/page/rule.page'
+      src: './src/page/three.page'
     },
     {
-      name: 'answer',
+      name: 'four',
       isPage: true,
-      src: './src/page/answer.page'
+      src: './src/page/four.page'
     },
     {
-      name: 'victory',
+      name: 'five',
       isPage: true,
-      src: './src/page/victory.page'
+      src: './src/page/five.page'
     },
     {
-      name: 'fail',
+      name: 'six',
       isPage: true,
-      src: './src/page/fail.page'
+      src: './src/page/six.page'
     }
   ],
   // 调试模式配置
@@ -176,7 +176,7 @@ module.exports = {
       // 输出文件自动追加版本号，可以用来消除缓存
       addVersion: false,
     },
-    serverPort: 8001,
+    serverPort: 8000,
     // 静态文件服务
     server: true,
     // 自动重新加载

@@ -1,0 +1,194 @@
+<template>
+  <div class="five">
+    <div class="safety">
+      <img class="item title" src="@&five-1.png&"/>
+      <img class="item icon" src="@&four-2.png&"/>
+      <div class="item pc">
+        <div class="pc-box">
+          <img draggable="false" src="@&page.png&"/>
+        </div>
+        <img class="hand" src="@&hand.png&"/>
+      </div>
+      <div class="item tip-box">
+        <img class="item tip" src="@&five-4.png&"/>
+        <video playsinline="true" src="@&video.mp4&"></video>
+        <div class="play-button" @click="play"></div>
+      </div>
+    </div>
+    <!-- 向上翻提示 -->
+    <img @click="flay" class="arrow" src="http://leaders.people.com.cn/img/MAIN/2018/09/118676/images/arrow-up.png"/>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      // 返回首页
+      // if (!owo.state.start) {
+      //   setTimeout(() => {
+      //     location.replace('')
+      //   }, 0)
+      // }
+      // 注册返回方式
+      owo.state.animation = {
+        "in": 'moveToRight',
+        "out": 'moveFromLeft'
+      }
+      // 能自动播放就自动播放
+      setTimeout(() => {
+        this.query('video')[0].play()
+      }, 3000)
+      // 计算长宽比例
+      changeDecorate(this.$el)
+    },
+    play: function () {
+      this.query('video')[0].play()
+    },
+    flay: function () {
+      $go('six', 'moveToTop', 'moveFromBottom')
+    }
+  }
+</script>
+
+
+<style lang="less">
+@keyframes moveFromTop1 {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 227px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromLeft2 {
+  from {
+    left: -500px;
+    opacity: 0;
+  }
+  to {
+    left: 192px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromLeft3 {
+  from {
+    left: -520px;
+    opacity: 0;
+  }
+  to {
+    left: 7px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromRight2 {
+  from {
+    right: -800px;
+    opacity: 0;
+  }
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
+
+.five[template="five"] {
+  background-color: #e8e9eb;
+}
+.title {
+  left: 124px;
+  top: -300px;
+  animation-fill-mode: forwards;
+  animation-name: 'moveFromTop1';
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+}
+.icon {
+  left: -500px;
+  top: 570px;
+  animation-fill-mode: forwards;
+  animation-name: 'moveFromLeft2';
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+}
+.pc {
+  width: 537px;
+  height: 460px;
+  left: -520px;
+  top: 845px;
+  animation-fill-mode: forwards;
+  animation-name: 'moveFromLeft3';
+  animation-delay: 2.5s;
+  animation-duration: 1s;
+  background-image: url('@&five-3.png&');
+}
+.tip {
+  right: 0;
+  top: 161px;
+}
+video {
+  right: 0;
+  position: absolute;
+  top: 0;
+  border-radius: 10px;
+  height: 145px;
+  width: 260px;
+}
+.pc-box {
+  width: 386px;
+  height: 240px;
+  background-color: white;
+  z-index: 999;
+  position: absolute;
+  top: 164px;
+  left: 73px;
+  overflow: scroll;
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+.tip-box {
+  position: relative;
+  overflow: hidden;
+  top: 992px;
+  right: -800px;
+  width: 260px;
+  height: 225px;
+  animation-fill-mode: forwards;
+  animation-name: 'moveFromRight2';
+  animation-delay: 3.5s;
+  animation-duration: 1s;
+  .play-button {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+  }
+}
+@keyframes handrun {
+  from {
+    bottom: 71px;
+  }
+  to {
+    bottom: 80px;
+  }
+}
+.hand {
+  position: absolute;
+  right: 87px;
+  bottom: 71px;
+  z-index: 999;
+  pointer-events: none;
+  animation-name: 'handrun';
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+</style>

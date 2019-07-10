@@ -7,7 +7,7 @@
     <div class="safety">
       <div class="item text"></div>
       
-      <img class="item button" src="@&one-3.png&"/>
+      <img class="item button" @touchend="flay" src="@&one-3.png&"/>
       
     </div>
     <img class="item flay" src="@&one-4.png&"/>
@@ -20,30 +20,27 @@
     },
     created: function () {
       // 返回首页
-      // if (!owo.state.start) {
-      //   setTimeout(() => {
-      //     location.replace('')
-      //   }, 0)
-      // }
+      if (!owo.state.start) {
+        setTimeout(() => {
+          location.replace('')
+        }, 0)
+      }
       // 注册返回方式
       owo.state.animation = {
         "in": 'moveToRight',
         "out": 'moveFromLeft'
       }
       setTimeout(() => {
-        this.$el.getElementsByClassName('flay')[0].classList.add('flaying')
+        this.query('.flay')[0].classList.add('flaying')
       }, 1000)
       
       setTimeout(() => {
-        this.$el.getElementsByClassName('button')[0].style.display = 'block'
-      }, 4500)
+        this.query('.button')[0].style.display = 'block'
+      }, 4000)
       changeDecorate(this.$el)
     },
-    look: function () {
-      $go('rule', 'moveToLeft', 'moveFromRight')
-    },
-    toAnswerQuestions: function () {
-      $go('answer', 'moveToLeft', 'moveFromRight')
+    flay: function () {
+      $go('three', 'moveToLeft', 'moveFromRight')
     }
   }
 </script>
@@ -70,9 +67,6 @@
     height: 367px;
   }
 }
-.item {
-  position: absolute;
-}
 .show-img {
   width: 100%;
   height: 33%;
@@ -98,6 +92,11 @@
   display: none;
   left: 126px;
   top: 1244px;
+  animation-fill-mode: backwards;
+  animation-name: 'twinkle';
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 .flay {
   left: -28%;

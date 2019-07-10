@@ -27,8 +27,7 @@
       changeDecorate(this.$el)
     },
     flay: function () {
-      console.log('sd')
-      this.query('title4')[0].classList.add('flay')
+      this.query('.title4')[0].classList.add('flay')
       // owo.state.start = true
       // 等待1秒进入第二页
       setTimeout(() => {
@@ -41,7 +40,7 @@
 
 <style lang="less">
 
-@keyframes moveFromTop {
+@keyframes moveFromTop3 {
   from {
     top: -300px;
     opacity: 0;
@@ -52,14 +51,7 @@
   }
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+
 
 @keyframes moveFromBootom {
   from {
@@ -81,7 +73,7 @@
   top: 320px;
   opacity: 0;
   animation-fill-mode: forwards;
-  animation-name: 'moveFromTop';
+  animation-name: 'moveFromTop3';
   animation-duration: 1s;
 }
 .title2 {

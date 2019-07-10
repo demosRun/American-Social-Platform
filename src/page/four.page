@@ -1,0 +1,133 @@
+<template>
+  <div class="four">
+    <div class="safety">
+      <img class="item title" src="@&four-1.png&"/>
+      <img class="item icon" src="@&four-2.png&"/>
+      <div class="item pc">
+        <div class="pc-box">
+          <img draggable="false" src="@&page.png&"/>
+        </div>
+        <img class="magnifier" src="@&magnifier.png&"/>
+      </div>
+      <img class="item tip" src="@&four-4.png&"/>
+    </div>
+    <!-- 向上翻提示 -->
+    <img @click="flay"  class="arrow" src="http://leaders.people.com.cn/img/MAIN/2018/09/118676/images/arrow-up.png"/>
+  </div>
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      // 返回首页
+      // if (!owo.state.start) {
+      //   setTimeout(() => {
+      //     location.replace('')
+      //   }, 0)
+      // }
+      // 注册返回方式
+      owo.state.animation = {
+        "in": 'moveToRight',
+        "out": 'moveFromLeft'
+      }
+      // 计算长宽比例
+      changeDecorate(this.$el)
+    },
+    flay: function () {
+      // $go('six', 'moveToBottom', 'moveFromTop')
+      $go('six', 'moveToTop', 'moveFromBottom')
+    }
+  }
+</script>
+
+
+<style lang="less">
+@keyframes moveFromTop2 {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 227px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromLeft2 {
+  from {
+    left: -500px;
+    opacity: 0;
+  }
+  to {
+    left: 192px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromLeft3 {
+  from {
+    left: -520px;
+    opacity: 0;
+  }
+  to {
+    left: 7px;
+    opacity: 1;
+  }
+}
+
+.four[template="four"] {
+  background-color: #e8e9eb;
+}
+.title {
+  left: 124px;
+  top: -300px;
+  animation-fill-mode: forwards;
+  animation-name: 'moveFromTop2';
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+}
+.icon {
+  left: -500px;
+  top: 570px;
+  animation-fill-mode: forwards;
+  animation-name: 'moveFromLeft2';
+  animation-delay: 1.5s;
+  animation-duration: 1s;
+}
+.pc {
+  width: 537px;
+  height: 460px;
+  left: -520px;
+  top: 845px;
+  animation-fill-mode: forwards;
+  animation-name: 'moveFromLeft3';
+  animation-delay: 2.5s;
+  animation-duration: 1s;
+  background-image: url('@&five-3.png&');
+}
+.pc-box {
+  width: 386px;
+  height: 240px;
+  background-color: white;
+  z-index: 999;
+  position: absolute;
+  top: 164px;
+  left: 73px;
+  overflow: scroll;
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+.tip {
+  left: 568px;
+  top: 1177px;
+}
+.magnifier {
+  position: absolute;
+  right: 87px;
+  bottom: 71px;
+  z-index: 999;
+  pointer-events: none;
+}
+</style>

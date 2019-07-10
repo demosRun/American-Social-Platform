@@ -3,9 +3,9 @@ window.onresize = function() {
   changeDecorate(document.getElementsByClassName(owo.entry)[0])
 }
 
-$(window).on("touchmove", function(e) {
-  e.preventDefault()
-})
+// $(window).on("touchmove", function(e) {
+//   e.preventDefault()
+// })
 
 function changeDecorate ($el) {
   log('重新计算合适安全区')
