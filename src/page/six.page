@@ -1,6 +1,6 @@
 <template>
   <div class="six">
-    <div class="info"><strong>更多信息：</strong><br>人民网海外社交平台推广网址<br><strong>联系我们：</strong><br>电话：010-6536 3638<br>邮箱：usa@people.cn<br>地址：北京市朝阳区金台西路2号人民日报新媒体大楼 </div>
+    <div class="info"><strong>更多信息：</strong><br>人民网海外社交平台<a href="http://usa.people.com.cn/GB/427127/">推广链接</a><br><strong>联系我们：</strong><br>电话：010-6536 3638<br>邮箱：usa@people.cn<br>地址：北京市朝阳区金台西路2号人民日报新媒体大楼 </div>
   </div>
 </template>
 
@@ -9,10 +9,19 @@
     data: {
     },
     created: function () {
-      owo.state.animation = {
-        "in": 'moveToBottom',
-        "out": 'moveFromTop'
-      }
+      // owo.state.animation = {
+      //   "in": 'moveToBottom',
+      //   "out": 'moveFromTop'
+      // }
+      // 监听下划事件
+      owo.tool.touch({
+        el: this.$el,
+        end: (e) => {
+          if (e.swipe[1] > 100) {
+            window.history.go(-1)
+          }
+        }
+      })
     }
   }
 </script>

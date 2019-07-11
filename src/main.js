@@ -6,13 +6,14 @@ window.onresize = function() {
 // $(window).on("touchmove", function(e) {
 //   e.preventDefault()
 // })
-
+var ms = null
 function changeDecorate ($el) {
+  if (!$el) return
   log('重新计算合适安全区')
   // 计算长宽比例
   const sw = document.body.offsetWidth / 750
   const sh = document.body.offsetHeight / 1508
-  const ms = sw > sh ? sh : sw
+  ms = sw > sh ? sh : sw
   // 获取页面安全区
   const safety = $el.querySelectorAll('.safety')[0]
   safety.style.transform = `scale(${ms})`

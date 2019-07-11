@@ -5,18 +5,20 @@
       <img class="item icon" src="@&four-2.png&"/>
       <div class="item pc">
         <div class="pc-box">
-          <img draggable="false" src="@&page.png&"/>
+          <img @click="explan('@&page2.jpg&')" src="@&page2.jpg&"/>
         </div>
         <img class="hand" src="@&hand.png&"/>
       </div>
       <div class="item tip-box">
         <img class="item tip" src="@&five-4.png&"/>
-        <video playsinline="true" src="@&video.mp4&"></video>
+        <video src="@&video.mp4&"></video>
         <div class="play-button" @click="play"></div>
       </div>
     </div>
     <!-- 向上翻提示 -->
-    <img @click="flay" class="arrow" src="http://leaders.people.com.cn/img/MAIN/2018/09/118676/images/arrow-up.png"/>
+    <img class="arrow" src="http://leaders.people.com.cn/img/MAIN/2018/09/118676/images/arrow-up.png"/>
+    <!-- 图片预览框 -->
+    <temple name="show2"  src="./src/module/show.owo"></temple>
   </div>
 </template>
 
@@ -34,18 +36,23 @@
         "in": 'moveToRight',
         "out": 'moveFromLeft'
       }
-      // 能自动播放就自动播放
-      setTimeout(() => {
-        this.query('video')[0].play()
-      }, 3000)
       // 计算长宽比例
       changeDecorate(this.$el)
+      // 监听上划事件
+      owo.tool.touch({
+        el: this.$el,
+        end: (e) => {
+          if (e.target.nodeName !== 'IMG' && e.swipe[1] < -100) {
+            $go('six', 'moveToTop', 'moveFromBottom')
+          }
+        }
+      })
     },
     play: function () {
       this.query('video')[0].play()
     },
-    flay: function () {
-      $go('six', 'moveToTop', 'moveFromBottom')
+    explan: function (url) {
+      this.template.show2.show(url)
     }
   }
 </script>
@@ -137,6 +144,8 @@ video {
   border-radius: 10px;
   height: 145px;
   width: 260px;
+  background-image: url('@&play.png&');
+  background-size: 100% 100%;
 }
 .pc-box {
   width: 386px;

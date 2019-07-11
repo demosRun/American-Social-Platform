@@ -6,9 +6,14 @@
     </div>
     <div class="safety">
       <div class="item text"></div>
-      
-      <img class="item button" @touchend="flay" src="@&one-3.png&"/>
-      
+      <img class="item text1" src="@&two-1.png&"/>
+      <img class="item text2" src="@&two-2.png&"/>
+      <img class="item text3" src="@&two-3.png&"/>
+      <img class="item text4" src="@&two-4.png&"/>
+      <div class="item title3">
+        <!-- 可拖动条 -->
+        <img class="item bar" src="@&one-3-2.png&"/>
+      </div>
     </div>
     <img class="item flay" src="@&one-4.png&"/>
   </div>
@@ -20,11 +25,11 @@
     },
     created: function () {
       // 返回首页
-      if (!owo.state.start) {
-        setTimeout(() => {
-          location.replace('')
-        }, 0)
-      }
+      // if (!owo.state.start) {
+      //   setTimeout(() => {
+      //     location.replace('')
+      //   }, 0)
+      // }
       // 注册返回方式
       owo.state.animation = {
         "in": 'moveToRight',
@@ -35,9 +40,35 @@
       }, 1000)
       
       setTimeout(() => {
-        this.query('.button')[0].style.display = 'block'
-      }, 4000)
-      changeDecorate(this.$el)
+        this.query('.title3')[0].style.display = 'block'
+      }, 4500)
+      setTimeout(() => {
+        changeDecorate(this.$el)
+      }, 0)
+      
+      // 获取起飞按钮实例
+      const bar = this.query('.bar')[0]
+      bar.style.left = '-25px'
+      // 滑动起飞
+      owo.tool.touch({
+        el: this.query('.title3')[0],
+        end: (e) => {
+          if (this.data.canFlay) {
+            this.flay()
+          } else {
+            bar.style.left = '-25px'
+          }
+        },
+        moveing: (e) => {
+          const x = e.clientX / ms
+          if (x > 210 && x < 480) {
+            bar.style.left = (e.clientX - 110) / ms + 'px'
+            if (x > 380) {
+              this.data.canFlay = true
+            }
+          }
+        }
+      })
     },
     flay: function () {
       $go('three', 'moveToLeft', 'moveFromRight')
@@ -47,26 +78,27 @@
 
 
 <style lang="less">
-@keyframes open {
-  0% {
-    height: 0;
+@keyframes moveFromLeft-two-1 {
+  from {
+    left: -500px;
+    opacity: 0;
   }
-  25% {
-    height: 55px;
-  }
-  30% {
-    height: 55px;
-  }
-  50% {
-    height: 200px;
-  }
-  50% {
-    height: 200px;
-  }
-  100% {
-    height: 367px;
+  to {
+    left: 129px;
+    opacity: 1;
   }
 }
+@keyframes moveFromLeft-two-2 {
+  from {
+    left: 500px;
+    opacity: 0;
+  }
+  to {
+    left: 128px;
+    opacity: 1;
+  }
+}
+
 .show-img {
   width: 100%;
   height: 33%;
@@ -77,36 +109,65 @@
     height: 100%;
   }
 }
-.text {
-  width: 512px;
-  height: 367px;
-  left: 129px;
-  top: 630px;
-  background-image: url('@&two-text.png&');
+.text1 {
+  left: -520px;
+  top: 628px;
   animation-fill-mode: forwards;
-  animation-timing-function: linear;
-  animation-name: 'open';
-  animation-duration: 4s;
+  animation-name: 'moveFromLeft-two-1';
+  animation-delay: 0s;
+  animation-duration: 1s;
 }
-.button {
+.text2 {
+  left: -520px;
+  top: 753px;
+  animation-fill-mode: forwards;
+  animation-name: 'moveFromLeft-two-2';
+  animation-delay: 1s;
+  animation-duration: 1s;
+}
+.text3 {
+  left: -520px;
+  top: 855px;
+  animation-fill-mode: forwards;
+  animation-name: 'moveFromLeft-two-1';
+  animation-delay: 2.2s;
+  animation-duration: 1s;
+}
+.text4 {
+  left: -520px;
+  top: 1035px;
+  animation-fill-mode: forwards;
+  animation-name: 'moveFromLeft-two-2';
+  animation-delay: 3.2s;
+  animation-duration: 1s;
+}
+.bar {
+  top: -11px;
+  left: -20px;
+  pointer-events: none;
+}
+.title3 {
+  width: 314px;
+  height: 69px;
+  top: 1253px;
+  left: 145px;
   display: none;
-  left: 126px;
-  top: 1244px;
   animation-fill-mode: backwards;
   animation-name: 'twinkle';
   animation-duration: 1s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
+  background-image: url('@&one-3-1.png&');
 }
 .flay {
   left: -28%;
   position: absolute;
-  top: 15%;
+  bottom: 75%;
   width: 30%;
-  transition: all 3s linear;
+  transition: all 3.5s linear;
 }
 .flaying {
-  top: 80%;
+  bottom: 13%;
   left: 65%;
 }
 </style>

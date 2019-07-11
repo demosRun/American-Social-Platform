@@ -3,7 +3,10 @@
     <div class="safety">
       <img class="title title1" src="@&one-text.png&"/>
       <img class="title title2" src="@&one-text-2.png&"/>
-      <img @touchend="flay" class="title title3" src="@&one-3.png&"/>
+      <div class="title title3">
+        <!-- 可拖动条 -->
+        <img class="title bar" src="@&one-3-2.png&"/>
+      </div>
       <img class="title title4" src="@&one-4.png&"/>
     </div>
   </div>
@@ -12,19 +15,42 @@
 <script>
   module.exports = {
     data: {
+      canFlay: false
     },
     created: function () {
       // 3秒后出现飞机
       setTimeout(() => {
         // $go('two', 'moveToRight', 'moveFromLeft')
         owo.state.start = true
-        console.log(this.query('.title'))
         this.query('.title3')[0].style.display = 'block'
         
         this.query('.title4')[0].style.opacity = 1
       }, 2500)
       // 计算长宽比例
       changeDecorate(this.$el)
+      // 获取起飞按钮实例
+      const bar = this.query('.bar')[0]
+      // 滑动起飞
+      owo.tool.touch({
+        el: this.query('.title3')[0],
+        end: (e) => {
+          if (this.data.canFlay) {
+            bar.style.left = '245px'
+            this.flay()
+          } else {
+            bar.style.left = '-25px'
+          }
+        },
+        moveing: (e) => {
+          const x = e.clientX / ms
+          if (x > 210 && x < 480) {
+            bar.style.left = (e.clientX - 110) / ms + 'px'
+            if (x > 380) {
+              this.data.canFlay = true
+            }
+          }
+        }
+      })
     },
     flay: function () {
       this.query('.title4')[0].classList.add('flay')
@@ -50,8 +76,6 @@
     opacity: 1;
   }
 }
-
-
 
 @keyframes moveFromBootom {
   from {
@@ -86,14 +110,22 @@
   animation-delay: 1s;
 }
 .title3 {
-  top: 837px;
-  left: 143px;
+  width: 314px;
+  height: 69px;
+  top: 849px;
+  left: 159px;
   display: none;
   animation-fill-mode: backwards;
   animation-name: 'twinkle';
   animation-duration: 1s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
+  background-image: url('@&one-3-1.png&');
+}
+.bar {
+  top: -11px;
+  left: -20px;
+  pointer-events: none;
 }
 .title4 {
   top: 450px;

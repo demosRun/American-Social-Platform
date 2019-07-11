@@ -1,0 +1,46 @@
+<template>
+  <div class="show-image">
+    <img @click="hide" src=""/>
+  </div>
+</template>
+
+<script>
+module.exports = {
+  data: {
+  },
+  created: function (params) {
+    this.$el.addEventListener("touchmove", function (e) {
+      // alert('sd')
+      e.stopPropagation()
+    }, true)
+    window.addEventListener("popstate", (e) => {
+      this.hide()
+    }, false)
+  },
+  hide: function () {
+    this.$el.style.display = 'none'
+  },
+  show: function (url) {
+    history.pushState(null, null, document.URL)
+    this.query('img')[0].src = url
+    this.$el.style.display = 'block'
+  }
+}
+</script>
+
+
+<style>
+.show-image {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: none;
+  z-index: 999;
+}
+img {
+  width: 100%;
+}
+</style>
