@@ -1,6 +1,6 @@
 <template>
-  <div class="show-image">
-    <img @click="hide" src=""/>
+  <div @click="hide" class="show-image">
+    <img src=""/>
   </div>
 </template>
 
@@ -14,11 +14,12 @@ module.exports = {
       e.stopPropagation()
     }, true)
     window.addEventListener("popstate", (e) => {
-      this.hide()
+      this.$el.style.display = 'none'
     }, false)
   },
   hide: function () {
     this.$el.style.display = 'none'
+    window.history.go(-1)
   },
   show: function (url) {
     history.pushState(null, null, document.URL)
@@ -42,5 +43,9 @@ module.exports = {
 }
 img {
   width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 </style>
