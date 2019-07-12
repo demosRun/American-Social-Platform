@@ -71,7 +71,7 @@
       })
     },
     flay: function () {
-      $go('three', 'moveToLeft', 'moveFromRight')
+      owo.go('three', 'moveToLeft', 'moveFromRight')
     }
   }
 </script>

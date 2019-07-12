@@ -41,10 +41,10 @@
       this.ringIt(this.query('.ring-item-box')[0], 220)
     },
     four: function () {
-      $go('four', 'moveToLeft', 'moveFromRight')
+      owo.go('four', 'moveToLeft', 'moveFromRight')
     },
     five: function () {
-      $go('five', 'moveToLeft', 'moveFromRight')
+      owo.go('five', 'moveToLeft', 'moveFromRight')
     },
     ringIt: function (dom, radius, centerCoordinate) {
       // 半径

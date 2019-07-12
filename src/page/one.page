@@ -20,7 +20,7 @@
     created: function () {
       // 3秒后出现飞机
       setTimeout(() => {
-        // $go('two', 'moveToRight', 'moveFromLeft')
+        // owo.go('two', 'moveToRight', 'moveFromLeft')
         owo.state.start = true
         this.query('.title3')[0].style.display = 'block'
         
@@ -57,7 +57,7 @@
       // owo.state.start = true
       // 等待1秒进入第二页
       setTimeout(() => {
-        $go('two', 'moveToLeft', 'moveFromRight')
+        owo.go('two', 'moveToLeft', 'moveFromRight')
       }, 1000)
       
     }
