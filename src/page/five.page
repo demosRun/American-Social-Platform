@@ -1,17 +1,17 @@
 <template>
   <div class="five">
     <div class="safety">
-      <img class="item title" src="@&five-1.png&"/>
-      <img class="item icon" src="@&four-2.png&"/>
+      <img class="item title" src="@|five-1.png|"/>
+      <img class="item icon" src="@|four-2.png|"/>
       <div class="item pc">
         <div class="pc-box">
-          <img @click="explan('@&page2.jpg&')" src="@&page2.jpg&"/>
+          <img @click="explan('@|page2.jpg|')" src="@|page2.jpg|"/>
         </div>
-        <img class="hand" src="@&hand.png&"/>
+        <img class="hand" src="@|hand.png|"/>
       </div>
       <div class="item tip-box">
-        <img class="item tip" src="@&five-4.png&"/>
-        <video src="@&video.mp4&"></video>
+        <img class="item tip" src="@|five-4.png|"/>
+        <video src="@|video.mp4|"></video>
         <div class="play-button" @click="play"></div>
       </div>
     </div>
@@ -131,7 +131,7 @@
   animation-name: 'moveFromLeft3';
   animation-delay: 2.5s;
   animation-duration: 1s;
-  background-image: url('@&five-3.png&');
+  background-image: url('@|five-3.png|');
 }
 .tip {
   right: 0;
@@ -144,7 +144,7 @@ video {
   border-radius: 10px;
   height: 145px;
   width: 260px;
-  background-image: url('@&play.png&');
+  background-image: url('@|play.png|');
   background-size: 100% 100%;
 }
 .pc-box {

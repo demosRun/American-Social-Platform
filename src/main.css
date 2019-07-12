@@ -44,7 +44,7 @@ a {
 }
 
 .two, .three {
-  background-image: url('@&two-bg.jpg&');
+  background-image: url('@|two-bg.jpg|');
 }
 
 .safety .item {

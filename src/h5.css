@@ -9,7 +9,7 @@
   background-color: #fcfefd;
 }
 .home {
-  background-image: url('@&bg.jpg&');
+  background-image: url('@|bg.jpg|');
 }
 
 .ox {

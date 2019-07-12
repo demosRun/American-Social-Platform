@@ -39,6 +39,6 @@
   font-size: 16px;
 }
 .six {
-  background-image: url('@&bg2.jpg&');
+  background-image: url('@|bg2.jpg|');
 }
 </style>

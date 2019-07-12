@@ -1,17 +1,17 @@
 <template>
   <div class="four">
     <div class="safety">
-      <img class="item title" src="@&four-1.png&"/>
-      <img class="item icon" src="@&four-2.png&"/>
+      <img class="item title" src="@|four-1.png|"/>
+      <img class="item icon" src="@|four-2.png|"/>
       <div class="item pc">
         <div class="pc-box">
-          <img @click="explan('@&page.jpg&')" src="@&page.jpg&"/>
+          <img @click="explan('@|page.jpg|')" src="@|page.jpg|"/>
         </div>
-        <img class="magnifier" src="@&magnifier.png&"/>
+        <img class="magnifier" src="@|magnifier.png|"/>
       </div>
       <!-- 活动海报 -->
-      <img @click="explan('@&page3.jpg&')"  class="item show" src="@&page3.jpg&"/>
-      <img class="item tip" src="@&four-4.png&"/>
+      <img @click="explan('@|page3.jpg|')"  class="item show" src="@|page3.jpg|"/>
+      <img class="item tip" src="@|four-4.png|"/>
     </div>
     <!-- 向上翻提示 -->
     <img class="arrow" src="http://leaders.people.com.cn/img/MAIN/2018/09/118676/images/arrow-up.png"/>
@@ -127,7 +127,7 @@
   animation-name: 'moveFromLeft3';
   animation-delay: 2.5s;
   animation-duration: 1s;
-  background-image: url('@&four-3.png&');
+  background-image: url('@|four-3.png|');
 }
 .pc-box {
   width: 386px;

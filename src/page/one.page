@@ -1,13 +1,13 @@
 <template>
   <div class="home">
     <div class="safety">
-      <img class="title title1" src="@&one-text.png&"/>
-      <img class="title title2" src="@&one-text-2.png&"/>
+      <img class="title title1" src="@|one-text.png|"/>
+      <img class="title title2" src="@|one-text-2.png|"/>
       <div class="title title3">
         <!-- 可拖动条 -->
-        <img class="title bar" src="@&one-3-2.png&"/>
+        <img class="title bar" src="@|one-3-2.png|"/>
       </div>
-      <img class="title title4" src="@&one-4.png&"/>
+      <img class="title title4" src="@|one-4.png|"/>
     </div>
   </div>
 </template>
@@ -120,7 +120,7 @@
   animation-duration: 1s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
-  background-image: url('@&one-3-1.png&');
+  background-image: url('@|one-3-1.png|');
 }
 .bar {
   top: -11px;

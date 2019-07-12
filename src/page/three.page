@@ -16,8 +16,8 @@
           <div class="ring-item">-封面图设计-</div>
         </div>
       </div>
-      <img @click="five" class="item button1" src="@&three-button-1.png&"/>
-      <img @click="four" class="item button2" src="@&three-button-2.png&"/>
+      <img @click="five" class="item button1" src="@|three-button-1.png|"/>
+      <img @click="four" class="item button2" src="@|three-button-2.png|"/>
     </div>
   </div>
 </template>
@@ -85,7 +85,7 @@
   height: 340px;
   left: 112px;
   top: 159px;
-  background-image: url('@&three-text.png&');
+  background-image: url('@|three-text.png|');
   animation-fill-mode: forwards;
   animation-timing-function: linear;
   animation-name: 'open';
@@ -96,7 +96,7 @@
   top: 543px;
   width: 714px;
   height: 686px;
-  background-image: url('@&three-1.png&');
+  background-image: url('@|three-1.png|');
   background-position: 13px -8px;
   opacity: 0;
   animation-fill-mode: forwards;

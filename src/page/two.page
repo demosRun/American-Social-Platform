@@ -2,20 +2,20 @@
   <div class="two">
     <!-- 顶部展示图片 -->
     <div class="show-img">
-      <img src="@&show.jpg&"/>
+      <img src="@|show.jpg|"/>
     </div>
     <div class="safety">
       <div class="item text"></div>
-      <img class="item text1" src="@&two-1.png&"/>
-      <img class="item text2" src="@&two-2.png&"/>
-      <img class="item text3" src="@&two-3.png&"/>
-      <img class="item text4" src="@&two-4.png&"/>
+      <img class="item text1" src="@|two-1.png|"/>
+      <img class="item text2" src="@|two-2.png|"/>
+      <img class="item text3" src="@|two-3.png|"/>
+      <img class="item text4" src="@|two-4.png|"/>
       <div class="item title3">
         <!-- 可拖动条 -->
-        <img class="item bar" src="@&one-3-2.png&"/>
+        <img class="item bar" src="@|one-3-2.png|"/>
       </div>
     </div>
-    <img class="item flay" src="@&one-4.png&"/>
+    <img class="item flay" src="@|one-4.png|"/>
   </div>
 </template>
 
@@ -157,7 +157,7 @@
   animation-duration: 1s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
-  background-image: url('@&one-3-1.png&');
+  background-image: url('@|one-3-1.png|');
 }
 .flay {
   left: -28%;
