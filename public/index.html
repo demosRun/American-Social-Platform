@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <title>页面</title>
+  <!-- 页面的元信息 -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="keywords" content="{TAG_59446_TAG}" />
+  <meta name="description" content="{TAG_59447_TAG}" />
+  <meta name="catalogs" content="{TAG_83943_TAG}" />
+  <meta name="filetype" content="1" />
+  <meta name="publishedtype" content="1" />
+  <meta name="pagetype" content="2" />
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="x5-orientation" content="portrait" />
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="browsermode" content="application" />
+  <meta name="x5-page-mode" content="app" />
+  <!-- 页面主样式文件 -->
+  <link charset="utf-8" rel="stylesheet" href="./static/css/owo.main.e5l9tmi3ah.css">
+  <style>
+    .turn-button {
+      position: absolute;
+      right: 10px;
+      bottom: 100px;
+      opacity: 0;
+      -webkit-animation-fill-mode: forwards;
+      -o-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      -webkit-animation-name: 'fadein';
+      -o-animation-name: 'fadein';
+      animation-name: 'fadein';
+      -webkit-animation-duration: 3.5s;
+      -o-animation-duration: 3.5s;
+      animation-duration: 3.5s;
+      -webkit-animation-delay: 3.5s;
+      -o-animation-delay: 3.5s;
+      animation-delay: 3.5s;
+    }
+    .logo {
+      top: 10%;
+      position: absolute;
+      left: 5%;
+    }
+    .logo2 {
+      top: 14%;
+      position: absolute;
+      left: -8%;
+      right: 0;
+      height: 40px;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 页面区域 -->
+  <!-- 第一页 -->
+  <div class="home ox" template="one" id="o-one" style="display: none;">
+    <div class="safety">
+      <!-- logo图标 -->
+      <img class="logo" src="./static/resource/logo.png"/>
+      <img class="title title1" src="./static/resource/one-text.png">
+      <img class="title title2" src="./static/resource/one-text-2.png">
+      <div class="title title3">
+        <!-- 可拖动条 -->
+        <img class="title bar" src="./static/resource/one-3-2.png">
+      </div>
+      <img class="title title4" src="./static/resource/one-4.png">
+    </div>
+  </div>
+  <!-- 第二页 -->
+  <div class="two ox" template="two" id="o-two" style="display: none;">
+    <!-- 顶部展示图片 -->
+    <div class="show-img">
+      <img src="./static/resource/show.jpg">
+    </div>
+    <div class="safety">
+      <div class="item text"></div>
+      <img class="item text1" src="./static/resource/two-1.png">
+      <img class="item text2" src="./static/resource/two-2.png">
+      <img class="item text3" src="./static/resource/two-3.png">
+      <img class="item text4" src="./static/resource/two-4.png">
+      <div class="item title3">
+        <!-- 可拖动条 -->
+        <img class="item bar" src="./static/resource/one-3-2.png">
+      </div>
+    </div>
+    <img class="item flay" src="./static/resource/one-4.png">
+  </div>
+  <!-- 第三页 -->
+  <div class="three ox" template="three" id="o-three" style="display: none;">
+    <div class="safety">
+      <!-- 上方文字 -->
+      <div class="item text"></div>
+      <!-- 旋转的环 -->
+      <div class="item ring">
+        <div class="ring-item-box">
+          <div class="ring-item">-月报年报-</div>
+          <div class="ring-item">-用户增长-</div>
+          <div class="ring-item">-用户互动-</div>
+          <div class="ring-item">主题策划推广</div>
+          <div class="ring-item">-审核发布-</div>
+          <div class="ring-item">-内容编译-</div>
+          <div class="ring-item">-账号创建-</div>
+          <div class="ring-item">-封面图设计-</div>
+        </div>
+      </div>
+      <img @click="five" class="item button1" src="./static/resource/three-button-1.png">
+      <img @click="four" class="item button2" src="./static/resource/three-button-2.png">
+    </div>
+  </div>
+  <!-- 第四页 -->
+  <div class="four ox" template="four" id="o-four" style="display: none;">
+    <div class="safety">
+      <img class="item title" src="./static/resource/four-1.png">
+      <img class="item icon" src="./static/resource/four-2.png">
+      <div class="item pc">
+        <div class="pc-box">
+          <img @click="explan('./static/resource/page.jpg')" src="./static/resource/page.jpg">
+        </div>
+        <img class="magnifier" src="./static/resource/magnifier.png">
+      </div>
+      <!-- 活动海报 -->
+      <img @click="explan('./static/resource/page3.jpg')" class="item show" src="./static/resource/page3.jpg">
+      <img class="item tip" src="./static/resource/four-4.png">
+      <img @click="five" class="turn-button" src="./static/resource/three-button-1.png"/>
+    </div>
+    <!-- 向上翻提示 -->
+    <img class="arrow" src="http://leaders.people.com.cn/img/MAIN/2018/09/118676/images/arrow-up.png">
+    <!-- 图片预览框 -->
+    <div @click="hide" class="show-image" template="show">
+      <img src="">
+    </div>
+  </div>
+  <!-- 第五页 -->
+  <div class="five ox" template="five" id="o-five" style="display: none;">
+    <div class="safety">
+      <img class="item title" src="./static/resource/five-1.png">
+      <img class="item icon" src="./static/resource/four-2.png">
+      <div class="item pc">
+        <div class="pc-box">
+          <img @click="explan('./static/resource/page2.jpg')" src="./static/resource/page2.jpg">
+        </div>
+        <img class="hand" src="./static/resource/hand.png">
+      </div>
+      <div class="item tip-box">
+        <img class="item tip" src="./static/resource/five-4.png">
+        <video x5-video-player-fullscreen='true' src="./static/resource/video.mp4"></video>
+        <div class="play-button" @click="play"></div>
+      </div>
+      <img @click="four" class="turn-button" src="./static/resource/three-button-2.png"/>
+    </div>
+    <!-- 向上翻提示 -->
+    <img class="arrow" src="http://leaders.people.com.cn/img/MAIN/2018/09/118676/images/arrow-up.png">
+    <!-- 图片预览框 -->
+    <div @click="hide" class="show-image" template="show2">
+      <img src="">
+    </div>
+  </div>
+  <!-- 第六页 -->
+  <div class="six ox" template="six" id="o-six" style="display: none;">
+    <!-- logo图标 -->
+    <img class="logo2" src="./static/resource/logo.png"/>
+    <div class="info"><strong>更多信息：</strong><br>
+      <a href="http://usa.people.com.cn/GB/427127/">人民网海外社交平台推广网站</a><br><strong>联系我们：</strong><br>电话：010-6536 3638<br>邮箱：usa@people.cn<br>地址：北京市朝阳区金台西路2号人民日报新媒体大楼
+    </div>
+  </div>
+  <!-- 框架script文件 -->
+  <script src="http://tools.people.com.cn/libs/jquery/3.0.0/jquery-3.0.0.min.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/owo.main.e5l9tmi3ah.js" type="text/javascript" charset="UTF-8"></script>
+</body>
+
+</html>

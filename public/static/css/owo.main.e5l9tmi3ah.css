@@ -1,0 +1,1379 @@
+body, html, .ox {
+  padding: 0;
+  margin: 0;
+}
+
+.owo-animation {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+/* 清除浮动 */
+.clear:after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+  zoom: 1;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+@-webkit-keyframes moveFromTop3 {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 320px;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes moveFromTop3 {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 320px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromTop3 {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 320px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes moveFromBootom {
+  from {
+    top: 1400px;
+    opacity: 0;
+  }
+
+  to {
+    top: 1169px;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes moveFromBootom {
+  from {
+    top: 1400px;
+    opacity: 0;
+  }
+
+  to {
+    top: 1169px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromBootom {
+  from {
+    top: 1400px;
+    opacity: 0;
+  }
+
+  to {
+    top: 1169px;
+    opacity: 1;
+  }
+}
+
+[template="one"] .title {
+  display: block;
+  position: absolute;
+}
+
+[template="one"] .title1 {
+  left: 222px;
+  top: 320px;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'moveFromTop3';
+       -o-animation-name: 'moveFromTop3';
+          animation-name: 'moveFromTop3';
+  -webkit-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+[template="one"] .title2 {
+  left: 140px;
+  top: 479px;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'fadein';
+       -o-animation-name: 'fadein';
+          animation-name: 'fadein';
+  -webkit-animation-duration: 3.5s;
+       -o-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+  -webkit-animation-delay: 1s;
+       -o-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+[template="one"] .title3 {
+  width: 314px;
+  height: 69px;
+  top: 849px;
+  left: 159px;
+  display: none;
+  -webkit-animation-fill-mode: backwards;
+       -o-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-name: 'twinkle';
+       -o-animation-name: 'twinkle';
+          animation-name: 'twinkle';
+  -webkit-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-direction: alternate;
+       -o-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+       -o-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  background-image: url('../resource/one-3-1.png');
+}
+
+[template="one"] .bar {
+  top: -11px;
+  left: -20px;
+  pointer-events: none;
+}
+
+[template="one"] .title4 {
+  top: 450px;
+  left: 338px;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.6s linear;
+  -o-transition: all 0.6s linear;
+  transition: all 0.6s linear;
+}
+
+[template="one"] .flay {
+  left: 755px;
+  top: 400px;
+}
+@-webkit-keyframes moveFromLeft-two-1 {
+  from {
+    left: -500px;
+    opacity: 0;
+  }
+
+  to {
+    left: 129px;
+    opacity: 1;
+  }
+}
+@-o-keyframes moveFromLeft-two-1 {
+  from {
+    left: -500px;
+    opacity: 0;
+  }
+
+  to {
+    left: 129px;
+    opacity: 1;
+  }
+}
+@keyframes moveFromLeft-two-1 {
+  from {
+    left: -500px;
+    opacity: 0;
+  }
+
+  to {
+    left: 129px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes moveFromLeft-two-2 {
+  from {
+    left: 500px;
+    opacity: 0;
+  }
+
+  to {
+    left: 128px;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes moveFromLeft-two-2 {
+  from {
+    left: 500px;
+    opacity: 0;
+  }
+
+  to {
+    left: 128px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromLeft-two-2 {
+  from {
+    left: 500px;
+    opacity: 0;
+  }
+
+  to {
+    left: 128px;
+    opacity: 1;
+  }
+}
+
+[template="two"] .show-img {
+  width: 100%;
+  height: 33%;
+  position: absolute;
+  top: 0;
+}
+
+[template="two"] .show-img img {
+  width: 100%;
+  height: 100%;
+}
+
+[template="two"] .text1 {
+  left: -520px;
+  top: 628px;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'moveFromLeft-two-1';
+       -o-animation-name: 'moveFromLeft-two-1';
+          animation-name: 'moveFromLeft-two-1';
+  -webkit-animation-delay: 0s;
+       -o-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+[template="two"] .text2 {
+  left: -520px;
+  top: 753px;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'moveFromLeft-two-2';
+       -o-animation-name: 'moveFromLeft-two-2';
+          animation-name: 'moveFromLeft-two-2';
+  -webkit-animation-delay: 1s;
+       -o-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+[template="two"] .text3 {
+  left: -520px;
+  top: 855px;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'moveFromLeft-two-1';
+       -o-animation-name: 'moveFromLeft-two-1';
+          animation-name: 'moveFromLeft-two-1';
+  -webkit-animation-delay: 2.2s;
+       -o-animation-delay: 2.2s;
+          animation-delay: 2.2s;
+  -webkit-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+[template="two"] .text4 {
+  left: -520px;
+  top: 1035px;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'moveFromLeft-two-2';
+       -o-animation-name: 'moveFromLeft-two-2';
+          animation-name: 'moveFromLeft-two-2';
+  -webkit-animation-delay: 3.2s;
+       -o-animation-delay: 3.2s;
+          animation-delay: 3.2s;
+  -webkit-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+[template="two"] .bar {
+  top: -11px;
+  left: -20px;
+  pointer-events: none;
+}
+
+[template="two"] .title3 {
+  width: 314px;
+  height: 69px;
+  top: 1253px;
+  left: 145px;
+  display: none;
+  -webkit-animation-fill-mode: backwards;
+       -o-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-name: 'twinkle';
+       -o-animation-name: 'twinkle';
+          animation-name: 'twinkle';
+  -webkit-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-direction: alternate;
+       -o-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+       -o-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  background-image: url('../resource/one-3-1.png');
+}
+
+[template="two"] .flay {
+  left: -28%;
+  position: absolute;
+  bottom: 75%;
+  width: 30%;
+  -webkit-transition: all 3.5s linear;
+  -o-transition: all 3.5s linear;
+  transition: all 3.5s linear;
+}
+
+[template="two"] .flaying {
+  bottom: 13%;
+  left: 65%;
+}
+@-webkit-keyframes open {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 340px;
+  }
+}
+@-o-keyframes open {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 340px;
+  }
+}
+@keyframes open {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 340px;
+  }
+}
+
+[template="three"] .text {
+  width: 548px;
+  height: 340px;
+  left: 112px;
+  top: 159px;
+  background-image: url('../resource/three-text.png');
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+       -o-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-name: 'open';
+       -o-animation-name: 'open';
+          animation-name: 'open';
+  -webkit-animation-duration: 4s;
+       -o-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
+[template="three"] .ring {
+  left: 36px;
+  top: 543px;
+  width: 714px;
+  height: 686px;
+  background-size: 96%;
+  background-repeat: no-repeat;
+  background-image: url('../resource/three-1.png');
+  background-position: 35px 10px;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'fadein';
+       -o-animation-name: 'fadein';
+          animation-name: 'fadein';
+  -webkit-animation-duration: 3.5s;
+       -o-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+  -webkit-animation-delay: 5s;
+       -o-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(90deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(270deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes circle_zi {
+  0% {
+    -webkit-transform: rotate(360deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(270deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(90deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+[template="three"] .ring .ring-item {
+  width: 130px;
+  height: 130px;
+  background-color: #7ea8f0;
+  border-radius: 65px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 130px;
+  color: white;
+  -webkit-animation: circle_zi 15s linear infinite;
+       -o-animation: circle_zi 15s linear infinite;
+          animation: circle_zi 15s linear infinite;
+}
+
+[template="three"] .ring .ring-item-box {
+  width: 100%;
+  height: 100%;
+  -webkit-animation: circle 15s linear infinite;
+       -o-animation: circle 15s linear infinite;
+          animation: circle 15s linear infinite;
+}
+
+[template="three"] .button1 {
+  left: 126px;
+  top: 1265px;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'fadein';
+       -o-animation-name: 'fadein';
+          animation-name: 'fadein';
+  -webkit-animation-duration: 3.5s;
+       -o-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+  -webkit-animation-delay: 5s;
+       -o-animation-delay: 5s;
+          animation-delay: 5s;
+}
+
+[template="three"] .button2 {
+  left: 487px;
+  top: 1265px;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'fadein';
+       -o-animation-name: 'fadein';
+          animation-name: 'fadein';
+  -webkit-animation-duration: 3.5s;
+       -o-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+  -webkit-animation-delay: 5s;
+       -o-animation-delay: 5s;
+          animation-delay: 5s;
+}
+.show-image {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: none;
+  z-index: 999;
+}
+
+[template="show"] img {
+  width: 100%;
+}
+@-webkit-keyframes moveFromTop2 {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 227px;
+    opacity: 1;
+  }
+}
+@-o-keyframes moveFromTop2 {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 227px;
+    opacity: 1;
+  }
+}
+@keyframes moveFromTop2 {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 227px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes moveFromLeft2 {
+  from {
+    left: -500px;
+    opacity: 0;
+  }
+
+  to {
+    left: 192px;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes moveFromLeft2 {
+  from {
+    left: -500px;
+    opacity: 0;
+  }
+
+  to {
+    left: 192px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromLeft2 {
+  from {
+    left: -500px;
+    opacity: 0;
+  }
+
+  to {
+    left: 192px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes moveFromLeft3 {
+  from {
+    left: -520px;
+    opacity: 0;
+  }
+
+  to {
+    left: 7px;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes moveFromLeft3 {
+  from {
+    left: -520px;
+    opacity: 0;
+  }
+
+  to {
+    left: 7px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromLeft3 {
+  from {
+    left: -520px;
+    opacity: 0;
+  }
+
+  to {
+    left: 7px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes moveFromRight3 {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes moveFromRight3 {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromRight3 {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.four[template="four"] {
+  background-color: #e8e9eb;
+}
+
+[template="four"] .title {
+  left: 124px;
+  top: -300px;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'moveFromTop2';
+       -o-animation-name: 'moveFromTop2';
+          animation-name: 'moveFromTop2';
+  -webkit-animation-delay: 0.5s;
+       -o-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+[template="four"] .icon {
+  left: -500px;
+  top: 570px;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'moveFromLeft2';
+       -o-animation-name: 'moveFromLeft2';
+          animation-name: 'moveFromLeft2';
+  -webkit-animation-delay: 1.5s;
+       -o-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+[template="four"] .pc {
+  width: 537px;
+  height: 460px;
+  left: -520px;
+  top: 845px;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'moveFromLeft3';
+       -o-animation-name: 'moveFromLeft3';
+          animation-name: 'moveFromLeft3';
+  -webkit-animation-delay: 2.5s;
+       -o-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+  background-image: url('../resource/four-3.png');
+}
+
+[template="four"] .pc-box {
+  width: 386px;
+  height: 240px;
+  background-color: white;
+  z-index: 999;
+  position: absolute;
+  top: 164px;
+  left: 73px;
+  overflow: scroll;
+}
+
+[template="four"] .pc-box img {
+  width: 100%;
+  display: block;
+}
+
+[template="four"] .tip {
+  right: -300px;
+  top: 1177px;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'moveFromRight3';
+       -o-animation-name: 'moveFromRight3';
+          animation-name: 'moveFromRight3';
+  -webkit-animation-delay: 2.5s;
+       -o-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+[template="four"] .magnifier {
+  position: absolute;
+  right: 87px;
+  bottom: 71px;
+  z-index: 999;
+  pointer-events: none;
+  -webkit-animation-name: 'handrun';
+       -o-animation-name: 'handrun';
+          animation-name: 'handrun';
+  -webkit-animation-duration: 2s;
+       -o-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-direction: alternate;
+       -o-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+       -o-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+[template="four"] .show {
+  width: 30%;
+  right: -300px;
+  bottom: 22%;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'moveFromRight3';
+       -o-animation-name: 'moveFromRight3';
+          animation-name: 'moveFromRight3';
+  -webkit-animation-delay: 2.5s;
+       -o-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+}
+.show-image[template="show2"] {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: none;
+  z-index: 999;
+}
+
+[template="show2"] img {
+  width: 100%;
+}
+@-webkit-keyframes moveFromTop1 {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 227px;
+    opacity: 1;
+  }
+}
+@-o-keyframes moveFromTop1 {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 227px;
+    opacity: 1;
+  }
+}
+@keyframes moveFromTop1 {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 227px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromLeft2 {
+  from {
+    left: -500px;
+    opacity: 0;
+  }
+
+  to {
+    left: 192px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromLeft3 {
+  from {
+    left: -520px;
+    opacity: 0;
+  }
+
+  to {
+    left: 7px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes moveFromRight2 {
+  from {
+    right: -800px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
+
+@-o-keyframes moveFromRight2 {
+  from {
+    right: -800px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes moveFromRight2 {
+  from {
+    right: -800px;
+    opacity: 0;
+  }
+
+  to {
+    right: 0px;
+    opacity: 1;
+  }
+}
+
+.five[template="five"] {
+  background-color: #e8e9eb;
+}
+
+[template="five"] .title {
+  left: 124px;
+  top: -300px;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'moveFromTop1';
+       -o-animation-name: 'moveFromTop1';
+          animation-name: 'moveFromTop1';
+  -webkit-animation-delay: 0.5s;
+       -o-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+[template="five"] .icon {
+  left: -500px;
+  top: 570px;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'moveFromLeft2';
+       -o-animation-name: 'moveFromLeft2';
+          animation-name: 'moveFromLeft2';
+  -webkit-animation-delay: 1.5s;
+       -o-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+[template="five"] .pc {
+  width: 537px;
+  height: 460px;
+  left: -520px;
+  top: 845px;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'moveFromLeft3';
+       -o-animation-name: 'moveFromLeft3';
+          animation-name: 'moveFromLeft3';
+  -webkit-animation-delay: 2.5s;
+       -o-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+  background-image: url('../resource/five-3.png');
+}
+
+[template="five"] .tip {
+  right: 0;
+  top: 161px;
+}
+
+[template="five"] video {
+  right: 0;
+  position: absolute;
+  top: 0;
+  border-radius: 10px;
+  height: 145px;
+  width: 260px;
+  background-image: url('../resource/play.png');
+  background-size: 100% 100%;
+}
+
+[template="five"] .pc-box {
+  width: 386px;
+  height: 240px;
+  background-color: white;
+  z-index: 999;
+  position: absolute;
+  top: 164px;
+  left: 73px;
+  overflow: scroll;
+}
+
+[template="five"] .pc-box img {
+  width: 100%;
+  display: block;
+}
+
+[template="five"] .tip-box {
+  position: relative;
+  overflow: hidden;
+  top: 992px;
+  right: -800px;
+  width: 260px;
+  height: 225px;
+  -webkit-animation-fill-mode: forwards;
+       -o-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: 'moveFromRight2';
+       -o-animation-name: 'moveFromRight2';
+          animation-name: 'moveFromRight2';
+  -webkit-animation-delay: 3.5s;
+       -o-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+  -webkit-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+[template="five"] .tip-box .play-button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+}
+
+@-webkit-keyframes handrun {
+  from {
+    bottom: 71px;
+  }
+
+  to {
+    bottom: 80px;
+  }
+}
+
+@-o-keyframes handrun {
+  from {
+    bottom: 71px;
+  }
+
+  to {
+    bottom: 80px;
+  }
+}
+
+@keyframes handrun {
+  from {
+    bottom: 71px;
+  }
+
+  to {
+    bottom: 80px;
+  }
+}
+
+[template="five"] .hand {
+  position: absolute;
+  right: 87px;
+  bottom: 71px;
+  z-index: 999;
+  pointer-events: none;
+  -webkit-animation-name: 'handrun';
+       -o-animation-name: 'handrun';
+          animation-name: 'handrun';
+  -webkit-animation-duration: 2s;
+       -o-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-direction: alternate;
+       -o-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+       -o-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+[template="six"] .info {
+  width: 80%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 27%;
+  margin: auto;
+  color: #434951;
+  line-height: 30px;
+  font-size: 16px;
+}
+
+.six {
+  background-image: url('../resource/bg.jpg');
+}
+
+/* 这个文件里写的是全局样式,在各个页面都生效 */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Microsoft YaHei;
+  position: relative;
+}
+/* 清除浮动 */
+.clear {
+  clear: both;
+}
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  
+}
+a {
+  text-decoration: none;
+}
+.ox {
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
+}
+.ox-home {
+  padding: 10px;
+}
+.ox-name {
+  width: 100%;
+  height: 100%;
+  background-color: lightskyblue;
+}
+
+/* 闪烁动画 */
+
+@keyframes twinkle {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.two, .three {
+  background-image: url('../resource/two-bg.jpg');
+}
+
+.safety .item {
+  position: absolute;
+}
+
+.ox {
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  background-position: center;
+  background-size: 100% 100%;
+  background-color: #fcfefd;
+}
+.home {
+  background-image: url('../resource/bg.jpg');
+}
+
+.ox {
+  width: 100%;
+  height: 100%;
+}
+html, body {
+  overflow:hidden;
+}
+body {
+  margin: 0 auto;
+  max-width: 70vh;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.safety {
+  overflow: hidden;
+}
+.safety {
+  width: 750px;
+  height: 1508px;
+  position: absolute;
+  transform-origin: center;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #FFF;
+  border-left: 1px solid #FFF;
+}
+::-webkit-scrollbar {
+  width: 2px;
+  height: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  background-clip: padding-box;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  min-height: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* 淡入 */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* 去掉全局 */
+* {
+  touch-action: pan-y;
+}
+
+@keyframes arrowmoveup {
+	0% {
+		bottom: 5%;
+		opacity: 1
+	}
+
+	100% {
+		bottom: 7%;
+		opacity: 0
+	}
+}
+.arrow {
+  position: absolute;
+  width: 5%;
+  left: 0;
+  right: 0;
+  bottom: 5%;
+  margin: auto;
+  animation: arrowmoveup 1.4s linear infinite;
+}
+
+.o-page-moveToRight {
+	-webkit-animation: moveToRight .6s ease both;
+	-moz-animation: moveToRight .6s ease both;
+	animation: moveToRight .6s ease both;
+}
+
+@-webkit-keyframes moveToRight { 
+	to { -webkit-transform: translateX(100%); }
+}
+@-moz-keyframes moveToRight { 
+	to { -moz-transform: translateX(100%); }
+}
+@keyframes moveToRight { 
+	to { transform: translateX(100%); }
+}
+.o-page-moveFromLeft {
+	-webkit-animation: moveFromLeft .6s ease both;
+	-moz-animation: moveFromLeft .6s ease both;
+	animation: moveFromLeft .6s ease both;
+}
+
+@-webkit-keyframes moveFromLeft {
+	from { -webkit-transform: translateX(-100%); }
+}
+@-moz-keyframes moveFromLeft {
+	from { -moz-transform: translateX(-100%); }
+}
+@keyframes moveFromLeft {
+	from { transform: translateX(-100%); }
+}
+.o-page-moveToLeft {
+	-webkit-animation: moveToLeft .6s ease both;
+	-moz-animation: moveToLeft .6s ease both;
+	animation: moveToLeft .6s ease both;
+}
+
+@-webkit-keyframes moveToLeft {
+	to { -webkit-transform: translateX(-100%); }
+}
+@-moz-keyframes moveToLeft {
+	to { -moz-transform: translateX(-100%); }
+}
+@keyframes moveToLeft {
+	to { transform: translateX(-100%); }
+}
+.o-page-moveFromRight {
+	-webkit-animation: moveFromRight .6s ease both;
+	-moz-animation: moveFromRight .6s ease both;
+	animation: moveFromRight .6s ease both;
+}
+
+@-webkit-keyframes moveFromRight {
+	from { -webkit-transform: translateX(100%); }
+}
+@-moz-keyframes moveFromRight {
+	from { -moz-transform: translateX(100%); }
+}
+@keyframes moveFromRight {
+	from { transform: translateX(100%); }
+}
+.o-page-moveToTop {
+	-webkit-animation: moveToTop .6s ease both;
+	-moz-animation: moveToTop .6s ease both;
+	animation: moveToTop .6s ease both;
+}
+
+@-webkit-keyframes moveToTop {
+	to { -webkit-transform: translateY(-100%); }
+}
+@-moz-keyframes moveToTop {
+	to { -moz-transform: translateY(-100%); }
+}
+@keyframes moveToTop {
+	to { transform: translateY(-100%); }
+}
+.o-page-moveFromBottom {
+	-webkit-animation: moveFromBottom .6s ease both;
+	-moz-animation: moveFromBottom .6s ease both;
+	animation: moveFromBottom .6s ease both;
+}
+@-webkit-keyframes moveFromBottom {
+	from { -webkit-transform: translateY(100%); }
+}
+@-moz-keyframes moveFromBottom {
+	from { -moz-transform: translateY(100%); }
+}
+@keyframes moveFromBottom {
+	from { transform: translateY(100%); }
+}
